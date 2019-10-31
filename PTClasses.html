@@ -1,0 +1,384 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      .blank {
+        border: none !important;
+        background-color: transparent !important;
+      }
+      .ptable {
+        display: grid;
+        position: relative;
+      }
+      @media only screen and (max-width: 700px) {
+        .ptable {
+          font-size: small;
+        }
+        .ptable > div > p {
+          /* margin-bottom: 7%; */
+        }
+      }
+      @media only screen and (max-width: 500px) {
+        .ptable {
+          font-size: x-small;
+        }
+        .ptable > div > p {
+          /* margin-bottom: 5%; */
+        }
+      }
+      .eightwide {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        max-width: 800px;
+      }
+      .sixwide {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        max-width: 600px;
+      }
+      .ptable > div {
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+        display: inline-block;
+      }
+      .eightwide > div.col8,
+      .sixwide > div.col6 {
+        border-right: 1px solid black;
+      }
+      .eightwide > div.row5,
+      .sixwide > div.row7 {
+        border-bottom: 1px solid black;
+      }
+      .ptable > div > h2 {
+        text-align: center;
+        margin: 20% 0 5% 0;
+      }
+      .ptable > div > p {
+        text-align: center;
+        margin-top: 10%;
+        margin-bottom: 5%;
+        padding: 0px 4px 0px 4px;
+      }
+      .ptable > div > .hd {
+        position: relative;
+        float: left;
+        top: 4px;
+        left: 4px;
+      }
+      .col1 {
+        background-color: rgba(200, 0, 0, 0.2);
+      }
+      .col2 {
+        background-color: rgba(220, 150, 0, 0.2);
+      }
+      .col3 {
+        background-color: rgba(200, 200, 0, 0.2);
+      }
+      .col4 {
+        background-color: rgba(0, 200, 0, 0.2);
+      }
+      .col5 {
+        background-color: rgba(0, 220, 150, 0.2);
+      }
+      .col6 {
+        background-color: rgba(0, 150, 220, 0.2);
+      }
+      .col7 {
+        background-color: rgba(0, 0, 200, 0.2);
+      }
+      .col8 {
+        background-color: rgba(150, 0, 200, 0.2);
+      }
+      /* .row1 {
+        background-color: rgba(200, 0, 0, 0.2);
+      }
+      .row2 {
+        background-color: rgba(200, 200, 0, 0.2);
+      }
+      .row3 {
+        background-color: rgba(0, 200, 0, 0.2);
+      }
+      .row4 {
+        background-color: rgba(0, 200, 200, 0.2);
+      }
+      .row5 {
+        background-color: rgba(0, 0, 200, 0.2);
+      } */
+      .row6 {
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+      .row7 {
+        background-color: rgba(0, 0, 0, 0.25);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Periodic Table of D&D Classes</h1>
+    <div style="overflow:auto;">
+      <div class="ptable eightwide">
+        <div class="row1 col1">
+          <div class="hd">d10</div>
+          <h2>Fi</h2>
+          <p>Fighter</p>
+        </div>
+        <div class="row1 col2" style="border-right: 1px solid black;">
+          <div class="hd">d6</div>
+          <h2>Th</h2>
+          <p>Thief</p>
+        </div>
+        <div class="row1 col3 blank"></div>
+        <div class="row1 col4 blank"></div>
+        <div class="row1 col5 blank"></div>
+        <div class="row1 col6">
+          <div class="hd">d8</div>
+          <h2>Cl</h2>
+          <p>Cleric</p>
+        </div>
+        <div class="row1 col7">
+          <div class="hd">d4</div>
+          <h2>Mu</h2>
+          <p>Wizard</p>
+        </div>
+        <div class="row1 col8">
+          <div class="hd">d4</div>
+          <h2>Co</h2>
+          <p>Commoner</p>
+        </div>
+
+        <div class="row2 col1">
+          <div class="hd">d12</div>
+          <h2>Bb</h2>
+          <p>Barbarian</p>
+        </div>
+        <div class="row2 col2">
+          <div class="hd">d6</div>
+          <h2>Ba</h2>
+          <p>Bard</p>
+        </div>
+        <div class="row2 col3">
+          <div class="hd">d8</div>
+          <h2>Sw</h2>
+          <p>Swordmage</p>
+        </div>
+        <div class="row2 col4">
+          <div class="hd">d8</div>
+          <h2>Af</h2>
+          <p>Artificer</p>
+        </div>
+        <div class="row2 col5">
+          <div class="hd">d8</div>
+          <h2>Dr</h2>
+          <p>Druid</p>
+        </div>
+        <div class="row2 col6">
+          <div class="hd">d10</div>
+          <h2>Pa</h2>
+          <p>Paladin</p>
+        </div>
+        <div class="row2 col7">
+          <div class="hd">d4</div>
+          <h2>So</h2>
+          <p>Sorcerer</p>
+        </div>
+        <div class="row2 col8">
+          <div class="hd">d6</div>
+          <h2>Ex</h2>
+          <p>Expert</p>
+        </div>
+
+        <div class="row3 col1">
+          <div class="hd">d10</div>
+          <h2>Wl</h2>
+          <p>Warlord</p>
+        </div>
+        <div class="row3 col2">
+          <div class="hd">d6</div>
+          <h2>Ss</h2>
+          <p>Assassin</p>
+        </div>
+        <div class="row3 col3">
+          <div class="hd">d6</div>
+          <h2>Db</h2>
+          <p>Duskblade</p>
+        </div>
+        <div class="row3 col4">
+          <div class="hd">d6</div>
+          <h2>Ti</h2>
+          <p>Tinker</p>
+        </div>
+        <div class="row3 col5">
+          <div class="hd">d8</div>
+          <h2>Ra</h2>
+          <p>Ranger</p>
+        </div>
+        <div class="row3 col6">
+          <div class="hd">d10</div>
+          <h2>Av</h2>
+          <p>Avenger</p>
+        </div>
+        <div class="row3 col7">
+          <div class="hd">d4</div>
+          <h2>Wk</h2>
+          <p>Warlock</p>
+        </div>
+        <div class="row3 col8">
+          <div class="hd">d8</div>
+          <h2>Wr</h2>
+          <p>Warrior</p>
+        </div>
+
+        <div class="row4 col1">
+          <div class="hd">d10</div>
+          <h2>Gl</h2>
+          <p>Gladiator</p>
+        </div>
+        <div class="row4 col2">
+          <div class="hd">d6</div>
+          <h2>Sc</h2>
+          <p>Scout</p>
+        </div>
+        <div class="row4 col3">
+          <div class="hd">d10</div>
+          <h2>Hx</h2>
+          <p>Hexblade</p>
+        </div>
+        <div class="row4 col4">
+          <div class="hd">d6</div>
+          <h2>Al</h2>
+          <p>Alchemist</p>
+        </div>
+        <div class="row4 col5">
+          <div class="hd">d6</div>
+          <h2>Sh</h2>
+          <p>Shaman</p>
+        </div>
+        <div class="row4 col6">
+          <div class="hd">d6</div>
+          <h2>In</h2>
+          <p>Invoker</p>
+        </div>
+        <div class="row4 col7">
+          <div class="hd">d10</div>
+          <h2>Bi</h2>
+          <p>Binder</p>
+        </div>
+        <div class="row4 col8">
+          <div class="hd">d4</div>
+          <h2>Ac</h2>
+          <p>Aristocrat</p>
+        </div>
+
+        <div class="row5 col1">
+          <div class="hd">d10</div>
+          <h2>Ml</h2>
+          <p>Marshal</p>
+        </div>
+        <div class="row5 col2">
+          <div class="hd">d6</div>
+          <h2>Ta</h2>
+          <p>Acrobat</p>
+        </div>
+        <div class="row5 col3">
+          <div class="hd">?</div>
+          <h2>??</h2>
+          <p>?????</p>
+        </div>
+        <div class="row5 col4">
+          <div class="hd">?</div>
+          <h2>??</h2>
+          <p>?????</p>
+        </div>
+        <div class="row5 col5">
+          <div class="hd">d10</div>
+          <h2>Se</h2>
+          <p>Seeker</p>
+        </div>
+        <div class="row5 col6">
+          <div class="hd">d10</div>
+          <h2>Fs</h2>
+          <p>Favored Soul</p>
+        </div>
+        <div class="row5 col7">
+          <div class="hd">d4</div>
+          <h2>Tn</h2>
+          <p>Truenamer</p>
+        </div>
+        <div class="row5 col8">
+          <div class="hd">d4</div>
+          <h2>Ad</h2>
+          <p>Adept</p>
+        </div>
+      </div>
+
+      <br />
+
+      <!-- Space for heavy elements -->
+      <div class="ptable sixwide">
+        <div class="row6 col1">
+          <div class="hd">d6</div>
+          <h2>Ps</h2>
+          <p>Psion</p>
+        </div>
+        <div class="row6 col2">
+          <div class="hd">d6</div>
+          <h2>Ar</h2>
+          <p>Ardent</p>
+        </div>
+        <div class="row6 col3">
+          <div class="hd">d6</div>
+          <h2>Bm</h2>
+          <p>Battlemind</p>
+        </div>
+        <div class="row6 col4">
+          <div class="hd">d8</div>
+          <h2>Pw</h2>
+          <p>Psychic Warrior</p>
+        </div>
+        <div class="row6 col5">
+          <div class="hd">d6</div>
+          <h2>Sk</h2>
+          <p>Soulknife</p>
+        </div>
+        <div class="row6 col6">
+          <div class="hd">d6</div>
+          <h2>Wi</h2>
+          <p>Wilder</p>
+        </div>
+
+        <div class="row7 col1">
+          <div class="hd">d6</div>
+          <h2>Wj</h2>
+          <p>Wu Jen</p>
+        </div>
+        <div class="row7 col2">
+          <div class="hd">d10</div>
+          <h2>Si</h2>
+          <p>Sohei</p>
+        </div>
+        <div class="row7 col3">
+          <div class="hd">d6</div>
+          <h2>Sg</h2>
+          <p>Shugenja</p>
+        </div>
+        <div class="row7 col4">
+          <div class="hd">d6</div>
+          <h2>Ni</h2>
+          <p>Ninja</p>
+        </div>
+        <div class="row7 col5">
+          <div class="hd">d10</div>
+          <h2>Sm</h2>
+          <p>Samurai</p>
+        </div>
+        <div class="row7 col6">
+          <div class="hd">d8</div>
+          <h2>Mo</h2>
+          <p>Monk</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
